@@ -1,16 +1,15 @@
 {
   "name": "comment-headers",
   "main": "./index",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Comment Headers",
-  "activationEvents": ["comment-headers:insert"],
+  "activationEvents": [
+    "comment-headers:insert"
+  ],
   "repository": "https://github.com/envygeeks/atom-comment-headers",
   "license": "Apache 2.0",
   "engines": {
     "atom": ">0.50.0"
   },
-
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
