@@ -35,9 +35,10 @@ module.exports = {
         lang = editor.getGrammar().name;
 
       switch(lang) {
-        case "Python": this.poundComment(x, editor, lang); break;
-        case "JavaScript": this.slashComment(x, editor, lang); break;
+        case "Ruby on Rails":
+        case "Python":
         case "Ruby": this.poundComment(x, editor, lang); break;
+        case "JavaScript": this.slashComment(x, editor, lang); break;
       }
     }
   },
