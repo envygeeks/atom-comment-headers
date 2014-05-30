@@ -27,7 +27,6 @@ module.exports = {
 
   insert: function () {
     var editor = atom.workspace.getActiveEditor();
-    window.atom = atom;
     // Don't make drastic assumptions that everything is ok.
     if (typeof(editor) !== "undefined" && editor !== null &&
           editor.getCursors().length === 1) {
