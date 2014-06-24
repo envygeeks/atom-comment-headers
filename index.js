@@ -25,6 +25,7 @@ module.exports = {
         case "Python":
         case "Ruby": this.poundComment(x, editor, lang); break;
 
+        case "LESS":
         case "SASS":
         case "SCSS":
         case "JavaScript": this.slashComment(x, editor, lang); break;
