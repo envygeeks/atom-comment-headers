@@ -20,6 +20,7 @@ module.exports = {
       switch(lang) {
         case "Shell Script (Bash)":
         case "Ruby on Rails":
+        case "Null Grammar":
         case "C":
         case "C++":
         case "Python":
