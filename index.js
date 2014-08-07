@@ -23,6 +23,7 @@ module.exports = {
         case "C":
         case "C++":
         case "Python":
+        case "Plain Text":
         case "Ruby": this.poundComment(x, editor, lang); break;
 
         case "LESS":
