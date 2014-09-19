@@ -21,6 +21,7 @@ module.exports = {
         case "Shell Script (Bash)":
         case "Ruby on Rails":
         case "Null Grammar":
+        case "YAML":
         case "C":
         case "C++":
         case "Python":
