@@ -26,23 +26,29 @@ module.exports = {
         case "C++":
         case "Python":
         case "Plain Text":
-        case "Ruby": this.poundComment(x, editor, lang); break;
+        case "Ruby":
+          this.poundComment(x, editor, lang); break;
 
         case "LESS":
         case "SASS":
         case "SCSS":
-        case "JavaScript": this.slashComment(x, editor, lang); break;
+        case "JavaScript":
+          this.slashComment(x, editor, lang); break;
       }
     }
   },
 
+  // In theory this should always be a proper number.
+  width: atom.config.get("editor.preferredLineLength"),
+  // If it's not a proper number will blow up.
+
   slashComment: function (x, editor) {
-    var str = new Array(77 - x).join("-");
+    var str = new Array(this.width - x).join("-");
     editor.insertText("// " + str);
   },
 
   poundComment: function (x, editor) {
-    var str = new Array(78 - x).join("-");
+    var str = new Array(this.width - x).join("-");
     editor.insertText("# " + str);
   }
 };
