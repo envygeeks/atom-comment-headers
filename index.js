@@ -14,41 +14,35 @@ module.exports = {
     if (typeof(editor) !== "undefined" && editor !== null &&
           editor.getCursors().length === 1) {
 
-      var x = editor.getCursors()[0].getBufferPosition().column,
-        lang = editor.getGrammar().name;
-
-      switch(lang) {
-        case "Shell Script (Bash)":
-        case "Ruby on Rails":
-        case "Null Grammar":
-        case "YAML":
+      switch(editor.getGrammar().name) {
         case "C":
-        case "C++":
-        case "Python":
+        case "YAML":
+        case "Null Grammar":
+        case "Ruby on Rails":
+        case "Shell Script (Bash)":
         case "Plain Text":
+        case "Python":
+        case "C++":
         case "Ruby":
-          this.poundComment(x, editor, lang); break;
+          this.insertCommentHeader(editor, "# ");
+        break;
 
-        case "LESS":
         case "SASS":
-        case "SCSS":
+        case "LESS":
         case "JavaScript":
-          this.slashComment(x, editor, lang); break;
+        case "SCSS":
+          this.insertCommentHeader(editor, "// ");
+        break;
       }
     }
   },
 
-  // In theory this should always be a proper number.
-  width: atom.config.get("editor.preferredLineLength"),
-  // If it's not a proper number will blow up.
+  insertCommentHeader: function (editor, start) {
+    var width = atom.config.get("editor.preferredLineLength"),
+        x = editor.getCursors()[0].getBufferPosition().column,
+        lgnth = start.length + x;
 
-  slashComment: function (x, editor) {
-    var str = new Array(this.width - x).join("-");
-    editor.insertText("// " + str);
-  },
-
-  poundComment: function (x, editor) {
-    var str = new Array(this.width - x).join("-");
-    editor.insertText("# " + str);
+    str = new Array(width - lgnth).join("-");
+    editor.insertText(   start   +   str   );
   }
 };
