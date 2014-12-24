@@ -17,6 +17,7 @@ module.exports = {
       switch(editor.getGrammar().name) {
         case "C":
         case "YAML":
+        case "Git Config":
         case "Null Grammar":
         case "Ruby on Rails":
         case "Shell Script (Bash)":
