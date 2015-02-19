@@ -1,16 +1,16 @@
 module.exports = {
   activate: function () {
-    return atom.workspaceView.command("comment-headers:insert",
-      (function (that) {
-        return function() {
+    return atom.commands.add("atom-text-editor", {
+      "comment-headers:insert": (function(that) {
+        return function(event) {
           return that.insert();
         };
-      })(this));
+      })(this)
+    });
   },
 
   insert: function () {
-    var editor = atom.workspace.getActiveEditor();
-    // Don't make drastic assumptions that everything is ok.
+    var editor = atom.workspace.getActiveTextEditor();
     if (typeof(editor) !== "undefined" && editor !== null &&
           editor.getCursors().length === 1) {
 
