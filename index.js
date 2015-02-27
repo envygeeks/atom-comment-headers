@@ -20,7 +20,9 @@ module.exports = {
         case "Git Config":
         case "Null Grammar":
         case "Ruby on Rails":
+        case "Dockerfile":
         case "Shell Script (Bash)":
+        case "Shell Script":
         case "Plain Text":
         case "Python":
         case "C++":
