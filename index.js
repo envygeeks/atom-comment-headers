@@ -35,6 +35,7 @@ module.exports = {
         case "Ruby Haml":
         case "JavaScript":
         case "SCSS":
+        case "PHP":
           this.insertCommentHeader(editor, "// ");
         break;
       }
