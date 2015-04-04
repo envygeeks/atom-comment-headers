@@ -28,6 +28,7 @@ module.exports = {
         case "Python":
         case "C++":
         case "Ruby":
+        case "nginx":
           this.insertCommentHeader(editor, "# ");
         break;
 
