@@ -15,6 +15,10 @@ module.exports = {
           editor.getCursors().length === 1) {
 
       switch(editor.getGrammar().name) {
+        case "SQL":
+          this.insertCommentHeader(editor, "--");
+        break;
+
         case "C":
         case "YAML":
         case "CoffeeScript":
