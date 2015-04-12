@@ -36,6 +36,7 @@ module.exports = {
           this.insertCommentHeader(editor, "# ");
         break;
 
+	case "Go":
         case "SASS":
         case "LESS":
         case "Ruby Haml":
