@@ -3,9 +3,11 @@
   "main": "./index",
   "version": "2.7.0",
   "description": "Comment Headers",
-  "activationCommands": [
-    "comment-headers:insert"
-  ],
+  "activationCommands": {
+    "atom-text-editor": [
+      "comment-headers:insert"
+    ]
+  },
   "repository": "https://github.com/envygeeks/atom-comment-headers",
   "license": "Apache 2.0",
   "engines": {
