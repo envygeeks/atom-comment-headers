@@ -3,7 +3,7 @@
   "main": "./index",
   "version": "2.6.0",
   "description": "Comment Headers",
-  "activationEvents": [
+  "activationCommands": [
     "comment-headers:insert"
   ],
   "repository": "https://github.com/envygeeks/atom-comment-headers",
