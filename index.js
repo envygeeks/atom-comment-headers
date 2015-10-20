@@ -52,11 +52,13 @@ module.exports = {
   },
 
   insertCommentHeader: function (editor, start) {
-    var width = atom.config.get("editor.preferredLineLength"),
-        x = editor.getCursors()[0].getBufferPosition().column,
-        lgnth = start.length + x;
+    var width = Number(atom.config.get("editor.preferredLineLength")) || 80,
+        x = Number(editor.getCursors()[0].getBufferPosition().column) ||  0,
+        length = start.length + x,  total_length = Number(width - length)
 
-    str = new Array(width - lgnth).join("-");
-    editor.insertText(   start   +   str   );
+    if (total_length > 0) {
+      str = new Array(Number(width - length) || 80).join("-");
+      editor.insertText(   start   +   str   );
+    }
   }
 };
