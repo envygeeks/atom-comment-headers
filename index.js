@@ -19,6 +19,7 @@ module.exports = {
           this.insertCommentHeader(editor, "--");
         break;
 
+        case "RSpec":
         case "C":
         case "YAML":
         case "CoffeeScript":
