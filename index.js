@@ -43,6 +43,8 @@ module.exports = {
         case "Ruby Haml":
         case "JavaScript":
         case "JavaScript (JSX)":
+       	case "TypeScript":
+       	case "TypeScript (JSX)":
         case "Babel ES6 JavaScript":
         case "SCSS":
         case "PHP":
