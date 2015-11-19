@@ -42,10 +42,10 @@ module.exports = {
         case "LESS":
         case "Ruby Haml":
         case "JavaScript":
-        case "JavaScript (JSX)":
-       	case "TypeScript":
-       	case "TypeScript (JSX)":
         case "Babel ES6 JavaScript":
+        case "JavaScript (JSX)":
+       	case "TypeScript (JSX)":
+       	case "TypeScript":
         case "SCSS":
         case "PHP":
           this.insertCommentHeader(editor, "// ");
