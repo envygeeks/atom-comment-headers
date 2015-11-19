@@ -22,11 +22,11 @@ module.exports = {
         case "RSpec":
         case "C":
         case "YAML":
+        case "Dockerfile":
         case "CoffeeScript":
         case "Git Config":
         case "Null Grammar":
         case "Ruby on Rails":
-        case "Dockerfile":
         case "Shell Script (Bash)":
         case "Shell Script":
         case "Plain Text":
@@ -37,7 +37,7 @@ module.exports = {
           this.insertCommentHeader(editor, "# ");
         break;
 
-	case "Go":
+	      case "Go":
         case "SASS":
         case "LESS":
         case "Ruby Haml":
@@ -57,7 +57,7 @@ module.exports = {
   insertCommentHeader: function (editor, start) {
     var width = Number(atom.config.get("editor.preferredLineLength")) || 80,
         x = Number(editor.getCursors()[0].getBufferPosition().column) ||  0,
-        length = start.length + x,  total_length = Number(width - length)
+        length = start.length + x,  total_length = Number(width - length);
 
     if (total_length > 0) {
       str = new Array(Number(width - length) || 80).join("-");
