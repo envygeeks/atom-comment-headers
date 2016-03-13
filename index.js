@@ -41,7 +41,7 @@ module.exports = {
 
 	      case "Go":
         case "SASS":
-        case "LESS":
+        case "Less":
         case "Ruby Haml":
         case "JavaScript":
         case "Babel ES6 JavaScript":
