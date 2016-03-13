@@ -1,4 +1,6 @@
 {
+  "license": "MIT",
+  "repository": "https://github.com/envygeeks/atom-comment-headers",
   "name": "comment-headers",
   "main": "./index",
   "version": "2.13.0",
@@ -8,10 +10,12 @@
       "comment-headers:insert"
     ]
   },
-  "repository": "https://github.com/envygeeks/atom-comment-headers",
-  "license": "Apache 2.0",
+
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {}
+
+  "dependencies": {
+
+  }
 }
