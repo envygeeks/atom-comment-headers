@@ -9,6 +9,8 @@ module.exports = {
     });
   },
 
+  // -------------------------------------------------------------------------
+
   insert: function () {
     var editor = atom.workspace.getActiveTextEditor();
     if (typeof(editor) !== "undefined" && editor !== null &&
@@ -54,14 +56,16 @@ module.exports = {
     }
   },
 
+  // -------------------------------------------------------------------------
+
   insertCommentHeader: function (editor, start) {
-    var width = Number(atom.config.get("editor.preferredLineLength")) || 80,
-        x = Number(editor.getCursors()[0].getBufferPosition().column) ||  0,
-        length = start.length + x,  total_length = Number(width - length);
+    var width = atom.config.get("editor.preferredLineLength") || 80,
+        x = editor.getCursors()[0].getBufferPosition().column ||  0,
+        length = start.length + x, total_length = width - length;
 
     if (total_length > 0) {
       str = new Array(Number(width - length) || 80).join("-");
-      editor.insertText(   start   +   str   );
+      editor.insertText(start + str   );
     }
   }
 };
