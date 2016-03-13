@@ -3,19 +3,15 @@
   "repository": "https://github.com/envygeeks/atom-comment-headers",
   "name": "comment-headers",
   "main": "./index",
-  "version": "2.13.0",
+  "version": "2.14.0",
   "description": "Comment Headers",
   "activationCommands": {
     "atom-text-editor": [
       "comment-headers:insert"
     ]
   },
-
   "engines": {
     "atom": ">0.50.0"
   },
-
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
