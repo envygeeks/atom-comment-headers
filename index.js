@@ -8,7 +8,7 @@ module.exports = {
       })(this)
     });
   },
-
+  
   // -------------------------------------------------------------------------
 
   insert: function () {
@@ -19,7 +19,13 @@ module.exports = {
       switch(editor.getGrammar().name) {
         case "SQL":
           this.insertCommentHeader(editor, "--");
-        break;
+          break;
+        
+        case "Clojure":
+        case "Scheme":
+        case "Lisp":
+          this.insertCommentHeader(editor, ";; ");
+          break;
 
         case "RSpec":
         case "C":
@@ -37,7 +43,7 @@ module.exports = {
         case "Ruby":
         case "Nginx":
           this.insertCommentHeader(editor, "# ");
-        break;
+          break;
 
 	      case "Go":
         case "SASS":
@@ -51,7 +57,7 @@ module.exports = {
         case "SCSS":
         case "PHP":
           this.insertCommentHeader(editor, "// ");
-        break;
+          break;
       }
     }
   },
