@@ -8,7 +8,7 @@ module.exports = {
       })(this)
     });
   },
-
+  
   // -------------------------------------------------------------------------
 
   insert: function () {
@@ -22,10 +22,10 @@ module.exports = {
           break;
         
         case "Clojure":
-       	case "Scheme":
-       	case "Lisp":
-       	  this.insertCommentHeader(editor, ";; ");
-       	  break;
+        case "Scheme":
+        case "Lisp":
+          this.insertCommentHeader(editor, ";; ");
+          break;
 
         case "RSpec":
         case "C":
@@ -45,7 +45,7 @@ module.exports = {
           this.insertCommentHeader(editor, "# ");
           break;
 
-	case "Go":
+	      case "Go":
         case "SASS":
         case "Less":
         case "Ruby Haml":
