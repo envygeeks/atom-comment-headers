@@ -19,7 +19,13 @@ module.exports = {
       switch(editor.getGrammar().name) {
         case "SQL":
           this.insertCommentHeader(editor, "--");
-        break;
+          break;
+        
+        case "Clojure":
+       	case "Scheme":
+       	case "Lisp":
+       	  this.insertCommentHeader(editor, ";; ");
+       	  break;
 
         case "RSpec":
         case "C":
@@ -37,9 +43,9 @@ module.exports = {
         case "Ruby":
         case "Nginx":
           this.insertCommentHeader(editor, "# ");
-        break;
+          break;
 
-	      case "Go":
+	case "Go":
         case "SASS":
         case "Less":
         case "Ruby Haml":
@@ -51,7 +57,7 @@ module.exports = {
         case "SCSS":
         case "PHP":
           this.insertCommentHeader(editor, "// ");
-        break;
+          break;
       }
     }
   },
